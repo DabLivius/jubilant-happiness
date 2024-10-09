@@ -1,0 +1,138 @@
+.columnimagen {
+  padding: 0;
+}
+
+.image-container {
+  height: 100%;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.centered-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 50px;
+}
+
+.product-image {
+  /* width: 50%;
+  height: 50%; */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.boton-productos {
+  width: 100%;
+}
+
+.productopromo {
+  margin-bottom: 0px !important;
+}
+
+.columnpromo {
+  padding: 20px;
+  margin: 0;
+}
+
+.columnpromo .newh2 {
+  color: white;
+}
+
+.container-promo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.div-cantidad.field{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.container-promo .p-precio {
+  margin-top: 0px;
+}
+
+.nosotros-box {
+  background-color: #f0f0f0;
+  padding: 20px 40px 40px;
+}
+
+.productos-dest {
+  background-color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.container-descuentos {
+  background-image: url("../img/FondoLogin.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 60px;
+}
+
+.container-formu {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.container-somos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  padding: 40px;
+}
+
+.container-imagen {
+  padding: 0;
+  height: 100%;
+}
+
+.title.is-1.newh2 {
+  width: 100%;
+  margin-top: 0;
+}
+
+.container-mv {
+  padding: 10px;
+}
+.column-centro {
+  padding: 20px;
+}
+
+.container-filtro {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.label-text {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.boton-enviar {
+  margin-top: 20px;
+}
+
+.oneproduct {
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.containerdescrip {
+  border-radius: 10px;
+}
+
+.btncomprar {
+  margin-top: 25px;
+  padding: 0 20px;
+}

@@ -1,0 +1,270 @@
+/* .navbar {
+  position: sticky;
+  width: 100%;
+  top: 0;
+} */
+
+.navbar-item img {
+  max-height: 2.2em;
+}
+
+.navbar-item.namepage {
+  padding-left: 0px;
+}
+
+.not-active {
+  pointer-events: none;
+  cursor: default;
+}
+
+.navbar-menu.is-active {
+  background-color: black;
+  color: white;
+}
+
+.navbar-menu.is-active .navbar-item {
+  color: white;
+}
+
+.navbar-menu.is-active .navbar-item:hover {
+  color: black;
+}
+
+.navbar-end .navbar-item.selected {
+  color: #ff4f58;
+}
+
+.container-background {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+/* 
+.select-inicio {
+  background-color: #f0f0f0;
+} */
+
+.title {
+  margin-top: 20px;
+}
+
+.box {
+  background-color: black;
+  border-radius: 10px;
+}
+
+.section.section-contacto {
+  background-image: url("../img/FondoFormulario.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section.sectionlogin {
+  background-image: url("../img/FondoLogin2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section.section-register {
+  background-image: url("../img/FondoRegister.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sectiontitle {
+  background-color: black;
+  padding: 20px;
+}
+
+.newh1 {
+  margin: 0px;
+}
+
+.section.section-contacto .newh2,
+.section.section.section-register .newh2{
+  color: white;
+}
+
+.section.section-contacto .label,
+.section.sectionlogin .label,
+.section.section-register .label{
+  color: white;
+}
+
+.section.section-contacto .newsubtitle,
+.section.sectionlogin .newsubtitle,
+.section.section-register .newsubtitle{
+  color: white;
+}
+
+.container-background form {
+  padding: 20px;
+}
+
+.button.is-danger.button-login:hover {
+  background-color: #d3373e;
+}
+
+.signup {
+  margin-left: 5px;
+}
+
+.signup:hover {
+  color: #f14668;
+}
+
+.footer {
+  padding-top: 0;
+  padding-bottom: 40px;
+}
+
+.container-promo {
+  padding: 40px;
+}
+
+.fa-brands {
+  font-size: 25px;
+}
+
+.fa-brands.fa-facebook {
+  color: #1f7bf2;
+}
+
+.fa-brands.fa-instagram {
+  color: #fc0297;
+}
+
+.fa-brands.fa-twitter {
+  color: #1d9bf0;
+}
+
+.container-redes {
+  padding-bottom: 0px;
+}
+
+.bd-notification.column {
+  padding-top: 0px;
+}
+
+.custom-modal{
+  border: 0.5px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: white;
+}
+
+.modal-card-title{
+  color: white;
+}
+
+.delete{
+  background-color: #d3373e;
+}
+
+.delete:hover{
+  background-color: #f14668;
+}
+
+.pagination-previous:hover,
+.pagination-next:hover,
+.pagination-link:hover{
+  color: white;
+  background-color: #f14668;
+}
+
+.pagination-link.is-current{
+  background-color: #3273dc;
+}
+
+.custom-modal,
+.modal-card-head,
+.modal-card-body,
+.modal-card-foot {
+  background-color: black;
+  color: white;
+}
+
+.form-email{
+  padding-right: 10px;
+}
+
+.confirmar{
+  padding-top: 1.8em;
+}
+
+td > button{
+  margin: 0px 5px;
+}
+
+.td-opcion > .btn-opcion{
+  margin: 5px;
+}
+
+.btn-form{
+  margin-left: 10px;
+}
+
+.menu-list>li>a:hover{
+  background-color: #FF85C7;
+}
+
+.menu-list>li>.selected{
+  background-color: #D5D4D4;
+}
+
+.td-imagen{
+  min-width: 300px;
+  width: 20%;
+}
+
+.paginator{
+  margin-bottom: 25px;
+}
+
+.container-welcome {
+  height: 300px;
+}
+
+.cont-welcome{
+  background-color: #1d9bf0;
+  margin-top: 20px;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.title-welcome{
+  color: white;
+  font-size: 1.5em;
+  font-weight:500;
+  margin: 0px;
+
+}
+
+.subtitle-welcome{
+  color: black;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.table-container{
+  margin-top: 30px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 1.5em;
+}
