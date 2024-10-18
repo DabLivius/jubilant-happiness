@@ -145,23 +145,23 @@
   
     return (
       <>
-        <section class="section section-register">
-          <div class="container container-background">
-            <div class="columns is-centered">
-              <div class="column is-6">
-                <div class="box">
-                  <h2 class="title is-2 has-text-centered mb-6 newh2">
+        <section className="section section-register">
+          <div className="container container-background">
+            <div className="columns is-centered">
+              <div className="column is-6">
+                <div className="box">
+                  <h2 className="title is-2 has-text-centered mb-6 newh2">
                     Crear Usuario
                   </h2>
-                  <p class="subtitle is-6 has-text-centered mb-1 newsubtitle">
+                  <p className="subtitle is-6 has-text-centered mb-1 newsubtitle">
                     Por favor, complete los siguientes campos para crear el Usuario.
                   </p>
                   <form onSubmit={handleSubmit}>
-                    <div class="field">
-                      <label class="label">Nombre Completo</label>
-                      <div class="control">
+                    <div className="field">
+                      <label className="label">Nombre Completo</label>
+                      <div className="control">
                         <input
-                          class="input"
+                          className="input"
                           id="nombre"
                           name="nombre"
                           type="text"
@@ -173,11 +173,11 @@
                         <p className="help is-danger">{errors.nombre}</p>
                       )}
                     </div>
-                    <div class="field">
-                      <label class="label">Email</label>
-                      <div class="control">
+                    <div className="field">
+                      <label className="label">Email</label>
+                      <div className="control">
                         <input
-                          class="input"
+                          className="input"
                           id="email"
                           name="email"
                           type="email"
@@ -189,11 +189,11 @@
                         <p className="help is-danger">{errors.email}</p>
                       )}
                     </div>
-                    <div class="field">
-                      <label class="label">Teléfono</label>
-                      <div class="control">
+                    <div className="field">
+                      <label className="label">Teléfono</label>
+                      <div className="control">
                         <input
-                          class="input"
+                          className="input"
                           id="phone"
                           name="phone"
                           type="text"
@@ -205,9 +205,9 @@
                         <p className="help is-danger">{errors.phone}</p>
                       )}
                     </div>
-                    <div class="field">
-                        <label class="label">Tipo de Usuario</label>
-                        <div class="control select is-fullwidth">
+                    <div className="field">
+                        <label className="label">Tipo de Usuario</label>
+                        <div className="control select is-fullwidth">
                           <select id="tipoUsuario" name="tipoUsuario" onChange={handleChange}>
                             <option disabled selected>Selecciona un tipo de usuario</option>
                             <option value="Administrador">Administrador</option>
@@ -218,11 +218,11 @@
                           <p className="help is-danger">{errors.tipoUsuario}</p>
                         )}
                       </div>
-                    <div class="field">
-                      <label class="label">Dirección de Residencia</label>
-                      <div class="control">
+                    <div className="field">
+                      <label className="label">Dirección de Residencia</label>
+                      <div className="control">
                         <input
-                          class="input"
+                          className="input"
                           id="direccion"
                           name="direccion"
                           type="text"
@@ -234,14 +234,14 @@
                         <p className="help is-danger">{errors.direccion}</p>
                       )}
                     </div>
-                    <div class="field">
-                    <label class="label">Contraseña</label>
-                    <div class="control">
+                    <div className="field">
+                    <label className="label">Contraseña</label>
+                    <div className="control">
                       <input
                         type="password"
                         id="password"
                         name="password"
-                        class="input"
+                        className="input"
                         placeholder="Ingrese su contraseña"
                         onChange={handleChange}
                       />
@@ -250,14 +250,14 @@
                       <p className="help is-danger">{errors.password}</p>
                     )}
                   </div>
-                  <div class="field">
-                    <label class="label">Confirmar Contraseña</label>
-                    <div class="control">
+                  <div className="field">
+                    <label className="label">Confirmar Contraseña</label>
+                    <div className="control">
                       <input
                         type="password"
                         id="confirmpassword"
                         name="confirmpassword"
-                        class="input"
+                        className="input"
                         placeholder="Ingrese su contraseña"
                         onChange={handleChange}
                       />
@@ -266,9 +266,9 @@
                       <p className="help is-danger">{errors.confirmpassword}</p>
                     )}
                   </div>
-                    <div class="field is-grouped is-grouped-centered">
-                      <div class="control">
-                        <button class="button is-danger button-login">
+                    <div className="field is-grouped is-grouped-centered">
+                      <div className="control">
+                        <button className="button is-danger button-login">
                           Crear
                         </button>
                         <Link to="/administracion/usuarios" className="button is-link btn-form">

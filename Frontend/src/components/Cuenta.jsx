@@ -25,7 +25,7 @@ const Cuenta = ({setId, setName, setLogin, setType }) => {
 
     return (
     <>
-    <section class="main-content columns is-fullheight">
+    <section className="main-content columns is-fullheight">
         <SidebarUser 
             handleOptionChange={handleOptionChange} selectedOption={selectedOption} 
             setId={setId} setName={setName} setLogin={setLogin} setType={setType} 

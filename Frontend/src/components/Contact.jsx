@@ -101,31 +101,31 @@ const Contact = () => {
 
   return (
     <>
-      <section class="sectiontitle">
+      <section className="sectiontitle">
         <div className="container-title">
           <h1 className="title is-3 has-text-white has-text-right newh1">
             Contacto
           </h1>
         </div>
       </section>
-      <section class="section section-contacto">
-        <div class="container container-background">
-          <div class="columns">
-            <div class="column is-5">
-              <div class="box">
-                <h2 class="title is-3 has-text-centered mb-6 newh2">
+      <section className="section section-contacto">
+        <div className="container container-background">
+          <div className="columns">
+            <div className="column is-5">
+              <div className="box">
+                <h2 className="title is-3 has-text-centered mb-6 newh2">
                   ¡Queremos estar en Contacto Contigo!
                 </h2>
-                <p class="subtitle is-6 has-text-centered mb-1 newsubtitle">
+                <p className="subtitle is-6 has-text-centered mb-1 newsubtitle">
                   Por favor, complete el siguiente formulario y pronto nos
                   podremos en contacto.
                 </p>
                 <form onSubmit={handleSubmit}>
-                  <div class="field">
-                    <label class="label">Nombre Completo</label>
-                    <div class="control">
+                  <div className="field">
+                    <label className="label">Nombre Completo</label>
+                    <div className="control">
                       <input
-                        class="input"
+                        className="input"
                         id="nombre"
                         name="nombre"
                         type="text"
@@ -137,11 +137,11 @@ const Contact = () => {
                       <p className="help is-danger">{errors.nombre}</p>
                     )}
                   </div>
-                  <div class="field">
-                    <label class="label">Email</label>
-                    <div class="control">
+                  <div className="field">
+                    <label className="label">Email</label>
+                    <div className="control">
                       <input
-                        class="input"
+                        className="input"
                         id="email"
                         name="email"
                         type="email"
@@ -153,11 +153,11 @@ const Contact = () => {
                       <p className="help is-danger">{errors.email}</p>
                     )}
                   </div>
-                  <div class="field">
-                    <label class="label">Teléfono</label>
-                    <div class="control">
+                  <div className="field">
+                    <label className="label">Teléfono</label>
+                    <div className="control">
                       <input
-                        class="input"
+                        className="input"
                         id="phone"
                         name="phone"
                         type="text"
@@ -169,13 +169,13 @@ const Contact = () => {
                       <p className="help is-danger">{errors.phone}</p>
                     )}
                   </div>
-                  <div class="field">
-                    <label class="label">Comentario</label>
-                    <div class="control">
+                  <div className="field">
+                    <label className="label">Comentario</label>
+                    <div className="control">
                       <textarea
                         id="commentary"
                         name="commentary"
-                        class="textarea"
+                        className="textarea"
                         placeholder="Escriba su comentario aquí"
                         onChange={handleChange}
                       ></textarea>
@@ -184,9 +184,9 @@ const Contact = () => {
                       <p className="help is-danger">{errors.commentary}</p>
                     )}
                   </div>
-                  <div class="field is-grouped is-grouped-centered">
-                    <div class="control">
-                      <button class="button is-danger button-login">
+                  <div className="field is-grouped is-grouped-centered">
+                    <div className="control">
+                      <button className="button is-danger button-login">
                         Enviar Contacto
                       </button>
                     </div>

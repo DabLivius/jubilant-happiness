@@ -127,23 +127,23 @@ const ProductForm = () => {
     
       return (
         <>
-          <section class="section section-register">
-            <div class="container container-background">
-              <div class="columns is-centered">
-                <div class="column is-6">
-                  <div class="box">
-                    <h2 class="title is-2 has-text-centered mb-6 newh2">
+          <section className="section section-register">
+            <div className="container container-background">
+              <div className="columns is-centered">
+                <div className="column is-6">
+                  <div className="box">
+                    <h2 className="title is-2 has-text-centered mb-6 newh2">
                       Crear Producto
                     </h2>
-                    <p class="subtitle is-6 has-text-centered mb-1 newsubtitle">
+                    <p className="subtitle is-6 has-text-centered mb-1 newsubtitle">
                     Por favor, complete los siguientes campos para crear el producto.
                     </p>
                     <form onSubmit={handleSubmit} encType="multipart/form-data">
-                      <div class="field">
-                        <label class="label">Nombre</label>
-                        <div class="control">
+                      <div className="field">
+                        <label className="label">Nombre</label>
+                        <div className="control">
                           <input
-                            class="input"
+                            className="input"
                             id="nombre"
                             name="nombre"
                             type="text"
@@ -155,18 +155,18 @@ const ProductForm = () => {
                           <p className="help is-danger">{errors.nombre}</p>
                         )}
                       </div>
-                      <div class="field">
-                        <label class="label">Imagen</label>
-                        <div class="file has-name is-fullwidth">
-                            <label class="file-label">
-                                <input class="file-input" type="file" id="imagen" name="imagen" accept="image/*" onChange={handleChange}/>
-                                <span class="file-cta">
-                                <span class="file-icon">
-                                    <i class="fas fa-upload"></i>
+                      <div className="field">
+                        <label className="label">Imagen</label>
+                        <div className="file has-name is-fullwidth">
+                            <label className="file-label">
+                                <input className="file-input" type="file" id="imagen" name="imagen" accept="image/*" onChange={handleChange}/>
+                                <span className="file-cta">
+                                <span className="file-icon">
+                                    <i className="fas fa-upload"></i>
                                 </span>
-                                <span class="file-label"> Subir imagen</span>
+                                <span className="file-label"> Subir imagen</span>
                                 </span>
-                                <span class="file-name">
+                                <span className="file-name">
                                   {selectedFile ? selectedFile.name : "No se ha seleccionado ningún archivo"}
                                 </span>
                             </label>
@@ -175,13 +175,13 @@ const ProductForm = () => {
                           <p className="help is-danger">{errors.imagen}</p>
                         )}
                       </div>
-                      <div class="field">
-                        <label class="label">Descripción</label>
-                        <div class="control">
+                      <div className="field">
+                        <label className="label">Descripción</label>
+                        <div className="control">
                           <textarea
                             id="descripcion"
                             name="descripcion"
-                            class="textarea"
+                            className="textarea"
                             placeholder="Ingrese la descripción del producto"
                             onChange={handleChange}
                             ></textarea>
@@ -190,14 +190,14 @@ const ProductForm = () => {
                           <p className="help is-danger">{errors.descripcion}</p>
                         )}
                       </div>
-                      <div class="field">
-                      <label class="label">Cantidad (stock)</label>
-                      <div class="control">
+                      <div className="field">
+                      <label className="label">Cantidad (stock)</label>
+                      <div className="control">
                         <input
                           type="number"
                           id="cantidad"
                           name="cantidad"
-                          class="input"
+                          className="input"
                           placeholder="Ingrese la cantidad que hay del producto"
                           onChange={handleChange}
                         />
@@ -206,14 +206,14 @@ const ProductForm = () => {
                         <p className="help is-danger">{errors.cantidad}</p>
                       )}
                     </div>
-                    <div class="field">
-                      <label class="label">Precio</label>
-                      <div class="control">
+                    <div className="field">
+                      <label className="label">Precio</label>
+                      <div className="control">
                         <input
                           type="number"
                           id="precio"
                           name="precio"
-                          class="input"
+                          className="input"
                           placeholder="Ingrese el precio del producto"
                           onChange={handleChange}
                         />
@@ -222,9 +222,9 @@ const ProductForm = () => {
                         <p className="help is-danger">{errors.precio}</p>
                       )}
                     </div>
-                      <div class="field is-grouped is-grouped-centered">
-                        <div class="control">
-                          <button class="button is-danger button-login">
+                      <div className="field is-grouped is-grouped-centered">
+                        <div className="control">
+                          <button className="button is-danger button-login">
                             Crear
                           </button>
                           <Link to="/administracion/productos" className="button is-link btn-form">

@@ -196,11 +196,11 @@ export const Inicio = () => {
                       <p className="help is-danger">{errors.email}</p>
                     )}
                   </div>
-                  <div class="field">
-                      <label class="label has-text-white">Teléfono</label>
-                      <div class="control">
+                  <div className="field">
+                      <label className="label has-text-white">Teléfono</label>
+                      <div className="control">
                         <input
-                          class="input"
+                          className="input"
                           id="phone"
                           name="phone"
                           type="text"

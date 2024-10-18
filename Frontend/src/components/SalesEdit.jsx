@@ -53,21 +53,21 @@ const SalesEdit = () => {
 
   return (
       <>
-          <section class="section section-register">
-              <div class="container container-background">
-                  <div class="columns is-centered">
-                      <div class="column is-6">
-                          <div class="box">
-                              <h2 class="title is-2 has-text-centered mb-6 newh2">
+          <section className="section section-register">
+              <div className="container container-background">
+                  <div className="columns is-centered">
+                      <div className="column is-6">
+                          <div className="box">
+                              <h2 className="title is-2 has-text-centered mb-6 newh2">
                                   Editar Estado de Venta
                               </h2>
-                              <p class="subtitle is-6 has-text-centered mb-1 newsubtitle">
+                              <p className="subtitle is-6 has-text-centered mb-1 newsubtitle">
                                   Por favor, selecciona el nuevo estado de la venta.
                               </p>
                               <form onSubmit={handleSubmit}>
-                                  <div class="field">
-                                      <label class="label">Estado de la Venta</label>
-                                      <div class="control select is-fullwidth">
+                                  <div className="field">
+                                      <label className="label">Estado de la Venta</label>
+                                      <div className="control select is-fullwidth">
                                           <select
                                               id="estado"
                                               name="estado"
@@ -80,9 +80,9 @@ const SalesEdit = () => {
                                           </select>
                                       </div>
                                   </div>
-                                  <div class="field is-grouped is-grouped-centered">
-                                      <div class="control">
-                                          <button class="button is-danger button-login">
+                                  <div className="field is-grouped is-grouped-centered">
+                                      <div className="control">
+                                          <button className="button is-danger button-login">
                                               Actualizar
                                           </button>
                                           <Link to="/administracion/ventas" className="button is-link btn-form">

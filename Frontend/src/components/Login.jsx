@@ -118,27 +118,27 @@ const Login = ({ setId, setName, setLogin, setType }) => {
 
   return (
     <>
-      <section class="sectiontitle">
+      <section className="sectiontitle">
         <div className="container-title">
           <h1 className="title is-3 has-text-white has-text-right newh1">
             Inicio de Sesión
           </h1>
         </div>
       </section>
-      <section class="section sectionlogin">
-        <div class="container container-background">
-          <div class="columns is-centered">
-            <div class="column is-5 is-offset-8">
-              <div class="box">
+      <section className="section sectionlogin">
+        <div className="container container-background">
+          <div className="columns is-centered">
+            <div className="column is-5 is-offset-8">
+              <div className="box">
                 <form onSubmit={handleSubmit}>
-                  <div class="field">
-                    <label class="label">Correo</label>
-                    <div class="control">
+                  <div className="field">
+                    <label className="label">Correo</label>
+                    <div className="control">
                       <input
                         type="email"
                         id="email"
                         name="email"
-                        class="input"
+                        className="input"
                         placeholder="correo@example.com"
                         onChange={handleChange}
                       />
@@ -147,14 +147,14 @@ const Login = ({ setId, setName, setLogin, setType }) => {
                       <p className="help is-danger">{errors.email}</p>
                     )}
                   </div>
-                  <div class="field">
-                    <label class="label">Contraseña</label>
-                    <div class="control">
+                  <div className="field">
+                    <label className="label">Contraseña</label>
+                    <div className="control">
                       <input
                         type="password"
                         id="password"
                         name="password"
-                        class="input"
+                        className="input"
                         placeholder="Ingrese su contraseña"
                         onChange={handleChange}
                       />
@@ -163,19 +163,19 @@ const Login = ({ setId, setName, setLogin, setType }) => {
                       <p className="help is-danger">{errors.password}</p>
                     )}
                   </div>
-                  <div class="field is-grouped is-grouped-centered">
-                    <div class="control">
+                  <div className="field is-grouped is-grouped-centered">
+                    <div className="control">
                       <button
-                        class="button is-danger button-login"
+                        className="button is-danger button-login"
                         type="submit"
                       >
                         Inicar Sesión
                       </button>
                     </div>
                   </div>
-                  <p class="subtitle is-6 has-text-centered mb-1 newsubtitle">
+                  <p className="subtitle is-6 has-text-centered mb-1 newsubtitle">
                     ¿No tiene cuenta?
-                    <Link class="signup" to="/registeruser">
+                    <Link className="signup" to="/registeruser">
                       Da click aquí.
                     </Link>
                   </p>
@@ -197,14 +197,14 @@ const Login = ({ setId, setName, setLogin, setType }) => {
                  {modalContent}
                 </p>
               </section>
-              {showSendEmailForm && (<footer class="modal-card-foot">
-                <div class="buttons">
-                  <form class="form-email" onSubmit={sendEmail}>
-                    <button class="button is-link"  onClick={() => setShowModal(false)}>
+              {showSendEmailForm && (<footer className="modal-card-foot">
+                <div className="buttons">
+                  <form className="form-email" onSubmit={sendEmail}>
+                    <button className="button is-link"  onClick={() => setShowModal(false)}>
                       Enviar Correo
                     </button>
                   </form>
-                  <Link class="button" to="/login" onClick={() => setShowModal(false)}>Cancelar</Link>
+                  <Link className="button" to="/login" onClick={() => setShowModal(false)}>Cancelar</Link>
                 </div>
               </footer>)}
             </div>

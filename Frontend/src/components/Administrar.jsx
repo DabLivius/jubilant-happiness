@@ -31,7 +31,7 @@ const Administrar = () => {
 
   return (
     <>
-      <section class="main-content columns is-fullheight">
+      <section className="main-content columns is-fullheight">
         <SidebarAdmin handleOptionChange={handleOptionChange} selectedOption={selectedOption} />
         {renderSelectedComponent()}
       </section>

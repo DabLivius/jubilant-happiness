@@ -33,15 +33,15 @@ function Nosotros() {
           </div>
         </div>
 
-        <div class="columns has-text-centered container-mv">
-          <div class="column column-centro">
+        <div className="columns has-text-centered container-mv">
+          <div className="column column-centro">
             <h2 className="title is-4">Misión</h2>
             <p className="mb-5">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
           </div>
-          <div class="column column-centro">
+          <div className="column column-centro">
             <h2 className="title is-4">Visión</h2>
             <p className="mb-5">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
