@@ -10,11 +10,12 @@ function Tienda() {
   const [filterType, setFilterType] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
   const productsPerPage = 6;
+  const axiosInstance = axios.create({baseURL: process.env.REACT_APP_API_URL,});
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get(
+        const response = await axiosInstance.get(
           `${import.meta.env.VITE_URI_BACK}/api/producto`
         );
         setProducts(response.data);

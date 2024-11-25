@@ -6,7 +6,9 @@
   import { useState } from "react";
   import { Link } from "react-router-dom";
   import axios from 'axios';
-  
+
+  const axiosInstance = axios.create({baseURL: process.env.REACT_APP_API_URL,});
+
   const ContactoRegister = () => {
     const [formData, setFormData] = useState({
       nombre: "",
@@ -65,7 +67,7 @@
     
       if (isNameValid && isEmailValid && isPhoneValid) {
         try {
-          const response = await axios.post(import.meta.env.VITE_URI_BACK+ "/api/contacto", formData);
+          const response = await axiosInstance.post(import.meta.env.VITE_URI_BACK+ "/api/contacto", formData);
           setModalContent("Contacto registrado correctamente.");
           setShowModal(true);
         } catch (error) {

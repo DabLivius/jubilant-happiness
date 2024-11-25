@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from 'axios';
 
+const axiosInstance = axios.create({baseURL: process.env.REACT_APP_API_URL,});
 const UserEdit = () => {
   const { id } = useParams();
 
@@ -33,7 +34,7 @@ const UserEdit = () => {
   useEffect(() => {
       const fetchProductDetails = async () => {
           try {
-              const response = await axios.get(`${import.meta.env.VITE_URI_BACK}/api/usuario/${id}`);
+              const response = await axiosInstance.get(`${import.meta.env.VITE_URI_BACK}/api/usuario/${id}`);
               const userData = response.data;
               setFormData(userData);
           } catch (error) {
@@ -104,7 +105,7 @@ const UserEdit = () => {
 
       if (isEmailValid && isNameValid && isPhoneValid && isTipoValid) {
           try {
-              const response = await axios.put(import.meta.env.VITE_URI_BACK+ "/api/usuario/"+id,formData);
+              const response = await axiosInstance.put(import.meta.env.VITE_URI_BACK+ "/api/usuario/"+id,formData);
               setModalContent("Usuario actualizado correctamente.");
               setShowModal(true);
           } catch (error) {

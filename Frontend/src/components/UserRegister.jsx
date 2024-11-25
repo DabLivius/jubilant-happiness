@@ -8,7 +8,8 @@
   import { useState } from "react";
   import { Link } from "react-router-dom";
   import axios from 'axios';
-  
+
+const axiosInstance = axios.create({baseURL: process.env.REACT_APP_API_URL,});
 const UserRegister = () => {
     const [formData, setFormData] = useState({
       nombre: "",
@@ -110,7 +111,7 @@ const UserRegister = () => {
         try {
           if(formData.password == formData.confirmpassword)
           {
-            const response = await axios.post(import.meta.env.VITE_URI_BACK+ "/api/usuario", formData);
+            const response = await axiosInstance.post(import.meta.env.VITE_URI_BACK+ "/api/usuario", formData);
             setModalContent("Usuario registrado correctamente.");
             setShowModal(true);
           }

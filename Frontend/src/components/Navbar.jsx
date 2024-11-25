@@ -3,10 +3,10 @@ import useNavbar from "../hooks/useSelectBurger";
 import "../styles/style.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
 
 function Navbar({ logged, userName, userType }) {
   const { menuActive, selectedItem, toggleMenu, handleMenuItemClick } = useNavbar();
+
 
   return (
     <nav

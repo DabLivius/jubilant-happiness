@@ -10,6 +10,7 @@ import axios from 'axios';
 
 const ContactoEdit = () => {
   const { id } = useParams();
+  const axiosInstance = axios.create({baseURL: process.env.REACT_APP_API_URL,});
 
   const [formData, setFormData] = useState({
       nombre: "",
@@ -31,7 +32,7 @@ const ContactoEdit = () => {
   useEffect(() => {
       const fetchProductDetails = async () => {
           try {
-              const response = await axios.get(`${import.meta.env.VITE_URI_BACK}/api/contacto/${id}`);
+              const response = await axiosInstance.get(`${import.meta.env.VITE_URI_BACK}/api/contacto/${id}`);
               const userData = response.data;
               setFormData(userData);
           } catch (error) {
@@ -93,7 +94,7 @@ const ContactoEdit = () => {
 
       if (isEmailValid && isNameValid && isPhoneValid) {
           try {
-              const response = await axios.put(import.meta.env.VITE_URI_BACK+ "/api/contacto/"+id,formData);
+              const response = await axiosInstance.put(import.meta.env.VITE_URI_BACK+ "/api/contacto/"+id,formData);
               setModalContent("Contacto actualizado correctamente.");
               setShowModal(true);
           } catch (error) {

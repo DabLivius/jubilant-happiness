@@ -9,13 +9,15 @@ const Sales = () => {
   const [filterType, setFilterType] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
   const [usuarios, setUsuarios] = useState({});
+  const axiosInstance = axios.create({baseURL: process.env.REACT_APP_API_URL,});
+
 
   const ventasPorPagina = 5;
 
   useEffect(() => {
     const fetchVentas = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_URI_BACK}/api/venta`);
+        const response = await axiosInstance.get(`${import.meta.env.VITE_URI_BACK}/api/venta`);
         setVentas(response.data);
       } catch (error) {
         console.error('Error al obtener los registros de ventas:', error);
@@ -32,7 +34,7 @@ const Sales = () => {
         const ventasConUsuarios = ventas.filter(venta => venta.idUser);
         for (const venta of ventasConUsuarios) {
           if (!usuariosMap[venta.idUser]) {
-            const response = await axios.get(`${import.meta.env.VITE_URI_BACK}/api/usuario/${venta.idUser}`);
+            const response = await axiosInstance.get(`${import.meta.env.VITE_URI_BACK}/api/usuario/${venta.idUser}`);
             usuariosMap[venta.idUser] = response.data.nombre;
           }
         }

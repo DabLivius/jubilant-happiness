@@ -11,11 +11,13 @@ const OneProduct = () => {
   const [quantity, setQuantity] = useState(1); // Por defecto, 1 producto seleccionado
   const navigate = useNavigate();
   const { id } = useParams();
+  const axiosInstance = axios.create({baseURL: process.env.REACT_APP_API_URL,});
+
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_URI_BACK}/api/producto/${id}`);
+        const response = await axiosInstance.get(`${import.meta.env.VITE_URI_BACK}/api/producto/${id}`);
         setShowModal(false);
         setProduct(response.data);
       } catch (error) {

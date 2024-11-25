@@ -11,6 +11,7 @@ const Administrar = () => {
   const { id } = useParams();
   const [selectedOption, setSelectedOption] = useState(id);
 
+
   const handleOptionChange = (option) => {
     setSelectedOption(option);
   }

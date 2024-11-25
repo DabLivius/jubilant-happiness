@@ -5,11 +5,13 @@ import axios from 'axios';
 const Perfil = () => {
   const [usuario, setUsuario] = useState([]);
   const id = localStorage.getItem("userId");
+  const axiosInstance = axios.create({baseURL: process.env.REACT_APP_API_URL,});
+
 
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axios.get(`${import.meta.env.VITE_URI_BACK}/api/usuario/${id}`);
+        const response = await axiosInstance.get(`${import.meta.env.VITE_URI_BACK}/api/usuario/${id}`);
         setUsuario(response.data);
       } catch (error) {
         console.error('Error al obtener el usuario:', error);

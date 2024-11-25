@@ -10,6 +10,8 @@ import axios from 'axios';
 
 const PerfilEdit = () => {
   const { id } = useParams();
+  const axiosInstance = axios.create({baseURL: process.env.REACT_APP_API_URL,});
+
 
   const [formData, setFormData] = useState({
       nombre: "",
@@ -33,7 +35,7 @@ const PerfilEdit = () => {
   useEffect(() => {
       const fetchProductDetails = async () => {
           try {
-              const response = await axios.get(`${import.meta.env.VITE_URI_BACK}/api/usuario/${id}`);
+              const response = await axiosInstance.get(`${import.meta.env.VITE_URI_BACK}/api/usuario/${id}`);
               const userData = response.data;
               setFormData(userData);
           } catch (error) {
@@ -104,7 +106,7 @@ const PerfilEdit = () => {
 
       if (isEmailValid && isNameValid && isPhoneValid && isDireccionValid && isTipoValid) {
           try {
-              const response = await axios.put(import.meta.env.VITE_URI_BACK+ "/api/usuario/"+id,formData);
+              const response = await axiosInstance.put(import.meta.env.VITE_URI_BACK+ "/api/usuario/"+id,formData);
               setModalContent("Usuario actualizado correctamente.");
               setShowModal(true);
           } catch (error) {

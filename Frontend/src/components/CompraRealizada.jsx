@@ -5,6 +5,8 @@ import axios from 'axios';
 const CompraRealizada = () => {
   const [usuario, setUsuario] = useState({});
   const [totalCompra, setTotalCompra] = useState(0); // Añadimos un estado para el total de la compra
+  const axiosInstance = axios.create({baseURL: process.env.REACT_APP_API_URL,});
+
 
   // Aquí podrías obtener el ID del usuario actual desde el localStorage
   const userId = localStorage.getItem('userId');
@@ -13,7 +15,7 @@ const CompraRealizada = () => {
     const fetchUserDetails = async () => {
       try {
         // Obtener los detalles del usuario
-        const usuarioResponse = await axios.get(`${import.meta.env.VITE_URI_BACK}/api/usuario/${userId}`);
+        const usuarioResponse = await axiosInstance.get(`${import.meta.env.VITE_URI_BACK}/api/usuario/${userId}`);
         setUsuario(usuarioResponse.data);
         
         // Obtener el total de la compra desde localStorage

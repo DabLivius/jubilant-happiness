@@ -12,6 +12,7 @@ const Login = ({ setId, setName, setLogin, setType }) => {
     email: "",
     password: "",
   });
+  const axiosInstance = axios.create({baseURL: process.env.REACT_APP_API_URL,});
 
   const [errors, setErrors] = useState({
     email: "",
@@ -54,7 +55,7 @@ const Login = ({ setId, setName, setLogin, setType }) => {
     const isPasswordValid = validatePassword(formData.password);
     if (isEmailValid && isPasswordValid) {
       try {
-        const response = await axios.post(import.meta.env.VITE_URI_BACK+'/api/usuario/login', formData);
+        const response = await axiosInstance.post(import.meta.env.VITE_URI_BACK+'/api/usuario/login', formData);
         tipoUsuario=response.data.tipoUsuario
         setShowModal(false);
         setId(response.data._id)

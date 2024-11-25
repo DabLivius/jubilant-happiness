@@ -10,11 +10,13 @@ const Compras = () => {
   const [filterType, setFilterType] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
   const productsPerPage = 5;
+  const axiosInstance = axios.create({baseURL: process.env.REACT_APP_API_URL,});
+  
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get(import.meta.env.VITE_URI_BACK+"/api/venta/byUserId/"+userId);
+        const response = await axiosInstance.get(import.meta.env.VITE_URI_BACK+"/api/venta/byUserId/"+userId);
         setProducts(response.data);
       } catch (error) {
         console.error('Error al obtener los registros de ventas:', error);

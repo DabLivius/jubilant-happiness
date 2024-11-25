@@ -7,11 +7,12 @@ const Confirmar = () => {
   const [confirmado, setConfirmado] = useState(false);
   const [error, setError] = useState(null);
   const proxy = "http://localhost:4000"
+  const axiosInstance = axios.create({baseURL: process.env.REACT_APP_API_URL,});
 
   useEffect(() => {
     const confirmarUsuario = async () => {
       try {
-        await axios.get(proxy+"/api/usuario/confirmar/"+token);
+        await axiosInstance.get(proxy+"/api/usuario/confirmar/"+token);
         setConfirmado(true);
       } catch (error) {
         setError("Error al confirmar usuario");

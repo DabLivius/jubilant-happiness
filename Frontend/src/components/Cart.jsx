@@ -9,6 +9,7 @@ const Cart = ({ product, quantity }) => {
   const [showModal, setShowModal] = useState(false);
   const [modalContent, setModalContent] = useState("");
   const navigate = useNavigate(); // Mover fuera de handleCheckout para usar correctamente el hook
+  const axiosInstance = axios.create({baseURL: process.env.REACT_APP_API_URL,});
 
   // Cargar carrito del localStorage
   useEffect(() => {
@@ -76,7 +77,7 @@ const Cart = ({ product, quantity }) => {
         };
 
         // Enviar producto individualmente al backend
-        const response = await axios.post(`${import.meta.env.VITE_URI_BACK}/api/venta`, formData);
+        const response = await axiosInstance.post(`${import.meta.env.VITE_URI_BACK}/api/venta`, formData);
 
         if (response.status !== 201) {
           errores.push(`Error al registrar el producto: ${product.nombre}`);

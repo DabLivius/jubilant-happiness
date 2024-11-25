@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from 'axios';
 
+const axiosInstance = axios.create({baseURL: process.env.REACT_APP_API_URL,});
 const ProductEditForm = () => {
     const { id } = useParams();
 
@@ -35,7 +36,7 @@ const ProductEditForm = () => {
       useEffect(() => {
         const fetchProductDetails = async () => {
           try {
-            const response = await axios.get(`${import.meta.env.VITE_URI_BACK}/api/producto/${id}`);
+            const response = await axiosInstance.get(`${import.meta.env.VITE_URI_BACK}/api/producto/${id}`);
             const productData = response.data;
             setFormData(productData);
           } catch (error) {
@@ -116,7 +117,7 @@ const ProductEditForm = () => {
 
         if (isNameValid && isDescripcionValid && isCantidadValid && isPrecioValid) {
           try {
-            const response = await axios.put(`${import.meta.env.VITE_URI_BACK}/api/producto/${id}`, formData);
+            const response = await axiosInstance.put(`${import.meta.env.VITE_URI_BACK}/api/producto/${id}`, formData);
             setModalContent("Producto actualizado correctamente.");
             setShowModal(true);
           } catch (error) {

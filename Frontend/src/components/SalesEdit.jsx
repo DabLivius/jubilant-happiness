@@ -4,6 +4,7 @@ import axios from 'axios';
 
 const SalesEdit = () => {
   const { id } = useParams();
+  const axiosInstance = axios.create({baseURL: process.env.REACT_APP_API_URL,});
 
   const [formData, setFormData] = useState({
       estado: "",
@@ -15,7 +16,7 @@ const SalesEdit = () => {
   useEffect(() => {
       const fetchProductDetails = async () => {
           try {
-              const response = await axios.get(`${import.meta.env.VITE_URI_BACK}/api/venta/${id}`);
+              const response = await axiosInstance.get(`${import.meta.env.VITE_URI_BACK}/api/venta/${id}`);
               const ventaData = response.data;
               setFormData(ventaData);
           } catch (error) {
@@ -38,7 +39,7 @@ const SalesEdit = () => {
       e.preventDefault();
 
       try {
-          const response = await axios.put(`${import.meta.env.VITE_URI_BACK}/api/venta/${id}`, formData);
+          const response = await axiosInstance.put(`${import.meta.env.VITE_URI_BACK}/api/venta/${id}`, formData);
           setModalContent("Estado de la venta actualizado correctamente.");
           setShowModal(true);
       } catch (error) {

@@ -17,6 +17,7 @@ const Contact = () => {
     phone: "",
     commentary: "",
   });
+  const axiosInstance = axios.create({baseURL: process.env.REACT_APP_API_URL,});
 
   const [errors, setErrors] = useState({
     nombre: "",
@@ -79,7 +80,7 @@ const Contact = () => {
 
     if (isEmailValid && isNameValid && isPhoneValid && isComentarioValid) {
       try {
-        const response = await axios.post(proxy+'/api/contacto/', formData);
+        const response = await axiosInstance.post(proxy+'/api/contacto/', formData);
         setModalContent("Contacto registrado correctamente.");
         setShowModal(true);
       } catch (error) {
