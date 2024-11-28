@@ -19,7 +19,7 @@ app.use(express.urlencoded({ limit: '5mb', extended: true }));
 
 // Configurar Cors
 // Configurar Cors
-const whitelist = ['http://localhost:5173'];
+const whitelist = ['http://localhost:5173', 'http://192.168.0.11'];
 const corsOptions = {
     origin: function(origin, callback) {
         if (!origin || whitelist.includes(origin)) {
