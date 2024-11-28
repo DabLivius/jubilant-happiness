@@ -28,7 +28,7 @@ function Nosotros() {
           </div>
           <div className="column columnimagen">
             <div className="image-container">
-              <img src="/src/img/Invitacion.jpg" alt="Imagen" />
+              <img src="../img/Invitacion.jpg" alt="Imagen" />
             </div>
           </div>
         </div>
@@ -53,7 +53,7 @@ function Nosotros() {
         <div className="columns productopromo">
           <div className="column columnimagen is-5">
             <div className="image-container">
-              <img src="/src/img/HystoryOld.jpg" alt="Imagen" />
+              <img src="../img/HystoryOld.jpg" alt="Imagen" />
             </div>
           </div>
           <div className="column is-7 has-background-black columnpromo">
