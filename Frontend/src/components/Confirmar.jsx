@@ -6,7 +6,7 @@ const Confirmar = () => {
   const { token } = useParams();
   const [confirmado, setConfirmado] = useState(false);
   const [error, setError] = useState(null);
-  const proxy = "http://192.168.0.11:4000"
+  const proxy = "http://192.168.0.11"
   const axiosInstance = axios.create({baseURL: process.env.REACT_APP_API_URL,});
 
   useEffect(() => {

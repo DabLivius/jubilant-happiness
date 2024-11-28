@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from 'axios';
 
-const proxy = "http://192.168.0.11:4000"
+const proxy = "http://192.168.0.11"
 
 const Contact = () => {
   const [formData, setFormData] = useState({
