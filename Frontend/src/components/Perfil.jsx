@@ -11,7 +11,7 @@ const Perfil = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const response = await axiosInstance.get(`${import.meta.env.VITE_URI_BACK}/api/usuario/${id}`);
+        const response = await axios.get(`${import.meta.env.VITE_URI_BACK}/api/usuario/${id}`);
         setUsuario(response.data);
       } catch (error) {
         console.error('Error al obtener el usuario:', error);

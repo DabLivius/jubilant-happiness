@@ -14,13 +14,13 @@ const OneSale = () => {
   useEffect(() => {
       const fetchVentaDetails = async () => {
           try {
-              const response = await axiosInstance.get(`${import.meta.env.VITE_URI_BACK}/api/venta/${id}`);
+              const response = await axios.get(`${import.meta.env.VITE_URI_BACK}/api/venta/${id}`);
               setVenta(response.data);
 
-              const usuarioResponse = await axiosInstance.get(`${import.meta.env.VITE_URI_BACK}/api/usuario/${response.data.idUser}`);
+              const usuarioResponse = await axios.get(`${import.meta.env.VITE_URI_BACK}/api/usuario/${response.data.idUser}`);
               setUsuario(usuarioResponse.data);
 
-              const productoResponse = await axiosInstance.get(`${import.meta.env.VITE_URI_BACK}/api/producto/${response.data.idProduct}`);
+              const productoResponse = await axios.get(`${import.meta.env.VITE_URI_BACK}/api/producto/${response.data.idProduct}`);
               setProducto(productoResponse.data);
           } catch (error) {
               console.error("Error al obtener los detalles de la venta:", error);

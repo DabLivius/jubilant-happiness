@@ -15,7 +15,7 @@ const Product = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axiosInstance.get(`${import.meta.env.VITE_URI_BACK}/api/producto`);
+        const response = await axios.get(`${import.meta.env.VITE_URI_BACK}/api/producto`);
         setProducts(response.data);
       } catch (error) {
         console.error('Error al obtener los productos:', error);
@@ -27,7 +27,7 @@ const Product = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axiosInstance.delete(`${import.meta.env.VITE_URI_BACK}/api/producto/${id}`);
+      await axios.delete(`${import.meta.env.VITE_URI_BACK}/api/producto/${id}`);
       setProducts(products.filter(product => product._id !== id));
     } catch (error) {
       console.error('Error al eliminar el producto:', error);

@@ -15,7 +15,7 @@ function Tienda() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axiosInstance.get(
+        const response = await axios.get(
           `${import.meta.env.VITE_URI_BACK}/api/producto`
         );
         setProducts(response.data);

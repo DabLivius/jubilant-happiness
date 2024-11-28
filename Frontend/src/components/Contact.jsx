@@ -80,7 +80,7 @@ const Contact = () => {
 
     if (isEmailValid && isNameValid && isPhoneValid && isComentarioValid) {
       try {
-        const response = await axiosInstance.post(proxy+'/api/contacto/', formData);
+        const response = await axios.post(proxy+'/api/contacto/', formData);
         setModalContent("Contacto registrado correctamente.");
         setShowModal(true);
       } catch (error) {

@@ -12,7 +12,6 @@ dotenv.config();
 connectdb();
 
 const app = express();
-const cors = require("cors")
 
 // Aumentar el límite de tamaño de carga
 app.use(express.json({ limit: '5mb' }));
@@ -41,7 +40,7 @@ const corsOptions = {
     }
 };
 **/
-app.use(cors("192.168.0.11"));
+app.use(cors());
 app.use(cors(corsOptions));
 
 // Routing

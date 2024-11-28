@@ -15,7 +15,7 @@ const CompraRealizada = () => {
     const fetchUserDetails = async () => {
       try {
         // Obtener los detalles del usuario
-        const usuarioResponse = await axiosInstance.get(`${import.meta.env.VITE_URI_BACK}/api/usuario/${userId}`);
+        const usuarioResponse = await axios.get(`${import.meta.env.VITE_URI_BACK}/api/usuario/${userId}`);
         setUsuario(usuarioResponse.data);
         
         // Obtener el total de la compra desde localStorage

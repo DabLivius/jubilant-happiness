@@ -17,7 +17,7 @@ const OneProduct = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axiosInstance.get(`${import.meta.env.VITE_URI_BACK}/api/producto/${id}`);
+        const response = await axios.get(`${import.meta.env.VITE_URI_BACK}/api/producto/${id}`);
         setShowModal(false);
         setProduct(response.data);
       } catch (error) {

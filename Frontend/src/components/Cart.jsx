@@ -77,7 +77,7 @@ const Cart = ({ product, quantity }) => {
         };
 
         // Enviar producto individualmente al backend
-        const response = await axiosInstance.post(`${import.meta.env.VITE_URI_BACK}/api/venta`, formData);
+        const response = await axios.post(`${import.meta.env.VITE_URI_BACK}/api/venta`, formData);
 
         if (response.status !== 201) {
           errores.push(`Error al registrar el producto: ${product.nombre}`);

@@ -68,7 +68,7 @@ export const Inicio = () => {
 
     if (isNombreValid && isEmailValid) {
       try {
-        const response = await axiosInstance.post(import.meta.env.VITE_URI_BACK+'/api/contacto/', formData);
+        const response = await axios.post(import.meta.env.VITE_URI_BACK+'/api/contacto/', formData);
         console.log("Entro!!")
         setModalContent("Contacto registrado correctamente.");
         setShowModal(true);

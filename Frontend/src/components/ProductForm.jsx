@@ -103,7 +103,7 @@ const axiosInstance = axios.create({baseURL: process.env.REACT_APP_API_URL,});
         if (isNameValid && isDescripcionValid  
             && isCantidadValid && isPrecioValid) {
           try {
-            const response = await axiosInstance.post(import.meta.env.VITE_URI_BACK+ "/api/producto", formData);
+            const response = await axios.post(import.meta.env.VITE_URI_BACK+ "/api/producto", formData);
             setModalContent("Producto registrado correctamente.");
             setShowModal(true);
           } catch (error) {

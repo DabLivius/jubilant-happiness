@@ -12,7 +12,7 @@ const Confirmar = () => {
   useEffect(() => {
     const confirmarUsuario = async () => {
       try {
-        await axiosInstance.get(proxy+"/api/usuario/confirmar/"+token);
+        await axios.get(proxy+"/api/usuario/confirmar/"+token);
         setConfirmado(true);
       } catch (error) {
         setError("Error al confirmar usuario");

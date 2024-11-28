@@ -15,7 +15,7 @@ const Contactos = () => {
   useEffect(() => {
     const fetchContactos = async () => {
       try {
-        const response = await axiosInstance.get(`${import.meta.env.VITE_URI_BACK}/api/contacto`);
+        const response = await axios.get(`${import.meta.env.VITE_URI_BACK}/api/contacto`);
         setUsers(response.data);
       } catch (error) {
         console.error('Error al obtener los contactos:', error);
@@ -27,7 +27,7 @@ const Contactos = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axiosInstance.delete(`${import.meta.env.VITE_URI_BACK}/api/contacto/${id}`);
+      await axios.delete(`${import.meta.env.VITE_URI_BACK}/api/contacto/${id}`);
       setUsers(users.filter(user => user._id !== id));
     } catch (error) {
       console.error('Error al eliminar el contacto:', error);

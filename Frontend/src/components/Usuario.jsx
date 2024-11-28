@@ -14,7 +14,7 @@ const Usuario = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axiosInstance.get(`${import.meta.env.VITE_URI_BACK}/api/usuario`);
+        const response = await axios.get(`${import.meta.env.VITE_URI_BACK}/api/usuario`);
         setUsers(response.data);
       } catch (error) {
         console.error('Error al obtener los productos:', error);

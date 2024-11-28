@@ -55,7 +55,7 @@ const Login = ({ setId, setName, setLogin, setType }) => {
     const isPasswordValid = validatePassword(formData.password);
     if (isEmailValid && isPasswordValid) {
       try {
-        const response = await axiosInstance.post(import.meta.env.VITE_URI_BACK+'/api/usuario/login', formData);
+        const response = await axios.post(import.meta.env.VITE_URI_BACK+'/api/usuario/login', formData);
         tipoUsuario=response.data.tipoUsuario
         setShowModal(false);
         setId(response.data._id)

@@ -67,7 +67,7 @@
     
       if (isNameValid && isEmailValid && isPhoneValid) {
         try {
-          const response = await axiosInstance.post(import.meta.env.VITE_URI_BACK+ "/api/contacto", formData);
+          const response = await axios.post(import.meta.env.VITE_URI_BACK+ "/api/contacto", formData);
           setModalContent("Contacto registrado correctamente.");
           setShowModal(true);
         } catch (error) {

@@ -16,7 +16,7 @@ const Compras = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axiosInstance.get(import.meta.env.VITE_URI_BACK+"/api/venta/byUserId/"+userId);
+        const response = await axios.get(import.meta.env.VITE_URI_BACK+"/api/venta/byUserId/"+userId);
         setProducts(response.data);
       } catch (error) {
         console.error('Error al obtener los registros de ventas:', error);
