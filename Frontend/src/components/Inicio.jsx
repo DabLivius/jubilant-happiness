@@ -96,7 +96,7 @@ export const Inicio = () => {
         <div className="columns productopromo">
           <div className="column is-8 columnimagen">
             <div className="image-container">
-              <img src="/src/img/Meat.jpg" alt="Imagen" />
+              <img src="/src/img/Elementos.jpg" alt="Imagen" />
             </div>
           </div>
           <div

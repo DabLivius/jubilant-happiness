@@ -54,19 +54,19 @@
 }
 
 .section.section-contacto {
-  background-image: url("../img/FondoFormulario.jpg");
+  background-image: url("../img/Celebration.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .section.sectionlogin {
-  background-image: url("../img/FondoLogin2.jpg");
+  background-image: url("../img/Backgroundlogin.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .section.section-register {
-  background-image: url("../img/FondoRegister.jpeg");
+  background-image: url("../img/Backgroundregister.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
