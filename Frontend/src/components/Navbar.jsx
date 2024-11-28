@@ -16,7 +16,7 @@ function Navbar({ logged, userName, userType }) {
     >
       <div className="navbar-brand">
         <Link className="navbar-item" to="/">
-          <img src="../img/Logo192x192.png" width={40} alt="Logo" />
+          <img src="Logo192x192.png" width={40} alt="Logo" />
         </Link>
         <Link className="navbar-item namepage" to="/">
           <strong>Party Shop</strong>
